@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>AGENDA WEB</h1>
+
+<%= sub %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>E-mail</th>
+      <th>Anotações</th>
+      <th>Nome da Mãe</th>
+      </tr>
+  </thead>
+
+  <tbody>
+      <% @contatos.each do |contato| %>
+      <tr>
+        <td><%= contato.nome %></td>
+        <td><%= formata_telefone(contato.telefone) %></td>
+        <td><%= contato.email %></td>
+        <td><%= contato.anotacao %></td>
+        <td><%= contato.nome_mae %></td>
+        <td><%= link_to 'Show', contato %></td>
+        <td><%= link_to 'Edit', edit_contato_path(contato) %></td>
+        <td><%= link_to 'Destroy', contato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Contato', new_contato_path %>
+
+
+<td><%= 'Sistema Desenvolvido por Fernando Rocha/Lab360' %></td>

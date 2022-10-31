@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cadastro de Usuário</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>E-mail</th> 
+      <th>CPF</th>
+      </tr>
+  </thead>
+
+  <tbody>
+      <% @users.each do |user| %>
+      <tr>
+       <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.cpf %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Adicionar Novo Usuário', new_user_path %>
+
+
+<td><%= 'Sistema Desenvolvido por Fernando Rocha by:Lab360' %></td>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  numero: 1
+  valor: 9.99
+  ativo: false
+  codigo: 
+
+two:
+  nome: MyString
+  numero: 1
+  valor: 9.99
+  ativo: false
+  codigo: 
